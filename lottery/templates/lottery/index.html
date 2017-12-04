@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>马票</title>
+</head>
+<body>
+<table>
+    <tr><th>序号</th><th>数字</th><th>出现次数</th><th>出现频率</th></tr>
+    {% if datas_numcounter %}
+    {% for numcounter in datas_numcounter.0 %}
+        {% if forloop.counter0 %}
+    <tr><td>{{ forloop.counter0}}</td><td>{{ numcounter.num }}</td><td>{{ numcounter.count }}</td><td>{{ numcounter.rate}}</td></tr>
+        {% endif %}
+    {% endfor %}
+    {% endif %}
+</table>
+</body>
+</html>
